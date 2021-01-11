@@ -1,0 +1,20 @@
+<!-- header -->
+<ion-header class="ion-no-border">
+    <ion-toolbar color="dark">
+        <ion-title>
+            Mauricio's News
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<!-- contenido -->
+<ion-content color="dark">
+
+    <app-noticias [noticias]="noticias"></app-noticias>
+
+    <ion-infinite-scroll threshold="150px" position="bottom" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Cargando data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+</ion-content>
